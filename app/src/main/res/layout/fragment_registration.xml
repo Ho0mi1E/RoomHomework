@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/fromTown"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Откуда"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/toTown"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Куда"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromTown" />
+
+    <EditText
+        android:id="@+id/departureTime"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Время вылета"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toTown" />
+
+    <EditText
+        android:id="@+id/arrivalTime"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Время прибытия"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departureTime" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Номер паспорта"
+        android:inputType="text"
+        android:maxLength="9"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrivalTime" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_margin="25dp"
+        android:hint="Имя"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitch"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_margin="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        >
+
+        <TextView
+            android:id="@+id/adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Взрослый билет"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Детский билет"
+            android:gravity="center"
+            android:textColor="@color/black"
+            />
+    </ViewSwitcher>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:text="Заказать"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/viewSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="50dp"/>
+    <ImageButton
+        android:id="@+id/btnHistory"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_history_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
