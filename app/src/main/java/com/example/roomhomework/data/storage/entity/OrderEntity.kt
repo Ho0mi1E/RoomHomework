@@ -5,6 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "orders")
 data class OrderEntity(
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0,
     val townFrom: String,
     val townTo: String,
     val timeDepart: String,
@@ -12,7 +14,4 @@ data class OrderEntity(
     val personName: String,
     val password: String,
     val typeOfPeople: String
-) {
-    @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
-}
+)

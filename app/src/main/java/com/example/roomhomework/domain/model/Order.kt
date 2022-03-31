@@ -6,6 +6,7 @@ import java.util.*
 
 
 data class Order(
+    val id: Int = 0,
     val townFrom: String,
     val townTo: String,
     val timeDepart: Date,

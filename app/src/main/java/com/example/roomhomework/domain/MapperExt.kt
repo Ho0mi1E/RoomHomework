@@ -11,6 +11,24 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-fun OrderEntity.toOrder() = Order(townFrom,townTo,timeDepart.toDate(),timeArrive.toDate(),personName,password, typeOfPeople)
-fun Order.toOrderEntity() = OrderEntity(townFrom, townTo, timeDepart.orderToString(), timeArrive.orderToString(), personName, password, typeOfPeople)
+fun OrderEntity.toOrder() = Order(id,townFrom,townTo,timeDepart.toDate(),timeArrive.toDate(),personName,password, typeOfPeople)
+fun Order.toOrderEntity() = OrderEntity(
+    townFrom = townFrom,
+    townTo =  townTo,
+    timeDepart = timeDepart.orderToString(),
+    timeArrive = timeArrive.orderToString(),
+    personName = personName,
+    password = password,
+    typeOfPeople = typeOfPeople)
+
+
+fun Order.toDeleteOrderEntity() = OrderEntity(
+    id = id,
+    townFrom = townFrom,
+    townTo =  townTo,
+    timeDepart = timeDepart.orderToString(),
+    timeArrive = timeArrive.orderToString(),
+    personName = personName,
+    password = password,
+    typeOfPeople = typeOfPeople)
 

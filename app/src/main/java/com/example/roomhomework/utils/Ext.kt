@@ -24,11 +24,11 @@ fun AppCompatActivity.showToast(message: String) {
 
 @SuppressLint("SimpleDateFormat")
 fun String.toDate(): Date {
-    return SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).parse(this)
+    return SimpleDateFormat("dd MM yy HH mm", Locale.ENGLISH).parse(this)
 
 }
 
 @SuppressLint("SimpleDateFormat")
 fun Date.orderToString(): String {
-    return SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(this)
+    return SimpleDateFormat("dd MM yy HH mm", Locale.ENGLISH).format(this)
 }

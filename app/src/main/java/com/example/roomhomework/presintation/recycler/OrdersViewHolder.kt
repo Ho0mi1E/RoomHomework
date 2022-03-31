@@ -32,7 +32,7 @@ class OrdersViewHolder(itemView: View, private val clickListener: DeleteClickLis
         }
 
         itemView.btnDelete.setOnClickListener {
-            clickListener.clickListener(item.copy())
+            clickListener.clickListener(item)
         }
     }
 }

@@ -3,6 +3,7 @@ package com.example.roomhomework.presintation.fragments
 
 import androidx.fragment.app.Fragment
 import com.example.roomhomework.R
+import com.example.roomhomework.data.storage.entity.OrderEntity
 import com.example.roomhomework.data.storage.entity.TypeOfPeople
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presintation.viewModel.OrdersViewModel
@@ -32,14 +33,13 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     private fun createOrder() {
         btnConfirm.setOnClickListener {
             viewModel.createOrder(
-                Order(
-                    fromTown.text.toString(),
-                    toTown.text.toString(),
-                    departureTime.text.toString().toDate(),
-                    arrivalTime.text.toString().toDate(),
-                    name.text.toString(),
-                    password.text.toString(),
-                    viewSwitchType()
+                Order(townFrom = fromTown.text.toString(),
+                    townTo = toTown.text.toString(),
+                    timeDepart = departureTime.text.toString().toDate(),
+                    timeArrive = arrivalTime.text.toString().toDate(),
+                    personName = name.text.toString(),
+                    password = password.text.toString(),
+                    typeOfPeople = viewSwitchType()
                 )
             )
         }
