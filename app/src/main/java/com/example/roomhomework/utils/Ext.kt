@@ -17,8 +17,8 @@ fun FragmentActivity.openFragment(container: Int, tag: String, fragment: Fragmen
 
 }
 
-fun AppCompatActivity.showToast(message: String) {
-    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+fun Fragment.showToast(message: String) {
+    Toast.makeText(this.requireContext(), message, Toast.LENGTH_LONG).show()
 }
 
 

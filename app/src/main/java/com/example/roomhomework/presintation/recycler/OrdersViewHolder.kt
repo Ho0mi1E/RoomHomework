@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.roomhomework.R
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presintation.deleteClickListner.DeleteClickListener
+import com.example.roomhomework.presintation.fragments.DeleteDialogFragment
 import com.example.roomhomework.utils.orderToString
 import kotlinx.android.synthetic.main.item_order.view.*
 
@@ -32,7 +33,8 @@ class OrdersViewHolder(itemView: View, private val clickListener: DeleteClickLis
         }
 
         itemView.btnDelete.setOnClickListener {
-            clickListener.clickListener(item)
+            val dialog = DeleteDialogFragment(clickListener,item)
+            dialog.show(clickListener.getSupport(),"ff")
         }
     }
 }

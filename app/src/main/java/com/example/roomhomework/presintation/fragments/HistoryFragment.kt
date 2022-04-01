@@ -2,6 +2,7 @@ package com.example.roomhomework.presintation.fragments
 
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.roomhomework.R
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presintation.deleteClickListner.DeleteClickListener
@@ -26,7 +27,11 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
                 newInstance(), TAG
             ).commit()
         }
+        override fun getSupport(): FragmentManager {
+            return requireActivity().supportFragmentManager
+        }
     }
+
     private val viewModel: OrdersViewModel by viewModel()
     private val adapter by lazy { OrdersAdapter(clickListener) }
 
