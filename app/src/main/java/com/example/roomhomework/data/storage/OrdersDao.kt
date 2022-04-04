@@ -9,7 +9,6 @@ import com.example.roomhomework.data.storage.entity.OrderEntity
 @Dao
 interface OrdersDao {
 
-
     @Query("SELECT * FROM orders")
     suspend fun getAllOrders(): List<OrderEntity>
 

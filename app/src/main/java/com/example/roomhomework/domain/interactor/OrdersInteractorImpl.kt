@@ -7,14 +7,14 @@ import com.example.roomhomework.domain.toOrder
 import com.example.roomhomework.domain.toOrderEntity
 
 class OrdersInteractorImpl(private val repository: OrdersRepository) : OrdersInteractor {
-    override suspend fun getOrder(): List<Order> {
-        return repository.getOrderEntity().map { orderEntity ->
+    override suspend fun getOrders(): List<Order> {
+        return repository.getOrdersEntity().map { orderEntity ->
             orderEntity.toOrder()
         }
     }
 
-    override suspend fun putOrder(order: Order) {
-        repository.putOrder(order.toOrderEntity())
+    override suspend fun saveOrder(order: Order) {
+        repository.saveOrderEntity(order.toOrderEntity())
     }
 
     override suspend fun deleteOrder(order: Order) {

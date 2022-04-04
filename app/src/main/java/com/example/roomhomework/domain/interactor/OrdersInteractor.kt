@@ -4,9 +4,9 @@ import com.example.roomhomework.data.storage.entity.OrderEntity
 import com.example.roomhomework.domain.model.Order
 
 interface OrdersInteractor {
-    suspend fun getOrder(): List<Order>
+    suspend fun getOrders(): List<Order>
 
-    suspend fun putOrder(order: Order)
+    suspend fun saveOrder(order: Order)
 
     suspend fun deleteOrder(order: Order)
 }

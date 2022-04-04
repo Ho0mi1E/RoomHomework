@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">RoomHomeWork</string>
+    <string name="adult">Взрослый</string>
+    <string name="child">Детский</string>
+    <string name="alert_title">Вы уверены что хотите удалить?</string>
+    <string name="alert_yes">Уверен</string>
+    <string name="alert_no">Отмена</string>
+    <string name="snack_empty">Есть пустые поля</string>
+    <string name="snack_date">Неверный формат даты</string>
+    <string name="snack_password">Неверный формат номера паспорта</string>
+    <string name="dates">Вылет %s. Прибытие %s</string>
+    <string name="towns">%s - %s</string>
+    <string name="person_info">Имя: %s.\nНомер паспорта: %s.\nТип билета: %s</string>
+    <string name="from_town">Откуда</string>
+    <string name="to_town">Куда</string>
+    <string name="departure_time">Время вылета</string>
+    <string name="arrival_time">Время прибытия</string>
+    <string name="password">Номер паспорта</string>
+    <string name="person_name">Имя</string>
+    <string name="child_ticket">Детский билет?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="order">Заказать</string>
+    <string name="delete">Удалить</string>
+    <string name="order_text">Заказ Билета</string>
+    <string name="helper_date">DD/MM/YY HH:MM</string>
 </resources>

@@ -1,11 +1,11 @@
-package com.example.roomhomework.presintation.recycler
+package com.example.roomhomework.presentation.recycler
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomhomework.domain.model.Order
-import com.example.roomhomework.presintation.deleteClickListner.DeleteClickListener
+import com.example.roomhomework.presentation.deleteClickListner.OnOrderItemClickListener
 
-class OrdersAdapter(private val clickListener: DeleteClickListener) :
+class OrdersAdapter(private val clickListener: OnOrderItemClickListener) :
     RecyclerView.Adapter<OrdersViewHolder>() {
 
     var orders = listOf<Order>()
@@ -25,6 +25,4 @@ class OrdersAdapter(private val clickListener: DeleteClickListener) :
         orders = list
         notifyDataSetChanged()
     }
-
-
 }

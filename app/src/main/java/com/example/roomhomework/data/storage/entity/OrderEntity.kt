@@ -7,11 +7,11 @@ import androidx.room.PrimaryKey
 data class OrderEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
-    val townFrom: String,
-    val townTo: String,
-    val timeDepart: String,
-    val timeArrive: String,
+    val fromTown: String,
+    val toTown: String,
+    val departureTime: String,
+    val arrivalTime: String,
     val personName: String,
     val password: String,
-    val typeOfPeople: String
+    val age: String
 )

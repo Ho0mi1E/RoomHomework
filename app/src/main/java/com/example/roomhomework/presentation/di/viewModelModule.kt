@@ -1,6 +1,6 @@
-package com.example.roomhomework.presintation.di
+package com.example.roomhomework.presentation.di
 
-import com.example.roomhomework.presintation.viewModel.OrdersViewModel
+import com.example.roomhomework.presentation.viewModel.OrdersViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

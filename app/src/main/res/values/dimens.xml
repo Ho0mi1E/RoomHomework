@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="horizontal_margin">164dp</dimen>
+    <dimen name="vertical_margin">48dp</dimen>
+    <dimen name="margin">25dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="title_Size">30sp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="text_margin_top">10dp</dimen>
+    <dimen name="edit_width">245dp</dimen>
+    <dimen name="edit_start">16dp</dimen>
+    <dimen name="edit_top">15dp</dimen>
+    <dimen name="switch_width">50dp</dimen>
+    <dimen name="switch_height">47dp</dimen>
+    <dimen name="switch_marge">100dp</dimen>
+    <dimen name="btn_width">120dp</dimen>
+    <dimen name="btn_height">64dp</dimen>
+    <dimen name="btn_history">54dp</dimen>
+
+
+</resources>

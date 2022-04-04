@@ -1,17 +1,14 @@
 package com.example.roomhomework.domain.model
 
-
-import java.time.LocalDateTime
 import java.util.*
-
 
 data class Order(
     val id: Int = 0,
-    val townFrom: String,
-    val townTo: String,
-    val timeDepart: Date,
-    val timeArrive: Date,
+    val fromTown: String,
+    val toTown: String,
+    val departmentTime: Date,
+    val arriveTime: Date,
     val personName: String,
     val password: String,
-    val typeOfPeople: String
+    val age: String
 )

@@ -5,7 +5,7 @@ import com.example.roomhomework.data.storage.AppDataBase
 import com.example.roomhomework.data.storage.OrdersDao
 import org.koin.dsl.module
 
-val daoModule = module {
+val roomModule = module {
     single<AppDataBase> {
         Room.databaseBuilder(
             get(),
@@ -13,6 +13,5 @@ val daoModule = module {
             "orders"
         ).build()
     }
-
     single<OrdersDao> { get<AppDataBase>().getOrderDao() }
 }

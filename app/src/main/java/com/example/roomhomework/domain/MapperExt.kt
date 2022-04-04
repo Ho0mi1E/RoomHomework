@@ -4,31 +4,36 @@ import com.example.roomhomework.data.storage.entity.OrderEntity
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.utils.orderToString
 import com.example.roomhomework.utils.toDate
-import java.sql.Date
-import java.text.DateFormat
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.*
 
-fun OrderEntity.toOrder() = Order(id,townFrom,townTo,timeDepart.toDate(),timeArrive.toDate(),personName,password, typeOfPeople)
+fun OrderEntity.toOrder() = Order(
+    id,
+    fromTown,
+    toTown,
+    departureTime.toDate(),
+    arrivalTime.toDate(),
+    personName,
+    password,
+    age
+)
+
 fun Order.toOrderEntity() = OrderEntity(
-    townFrom = townFrom,
-    townTo =  townTo,
-    timeDepart = timeDepart.orderToString(),
-    timeArrive = timeArrive.orderToString(),
+    fromTown = fromTown,
+    toTown = toTown,
+    departureTime = departmentTime.orderToString(),
+    arrivalTime = arriveTime.orderToString(),
     personName = personName,
     password = password,
-    typeOfPeople = typeOfPeople)
-
+    age = age
+)
 
 fun Order.toDeleteOrderEntity() = OrderEntity(
     id = id,
-    townFrom = townFrom,
-    townTo =  townTo,
-    timeDepart = timeDepart.orderToString(),
-    timeArrive = timeArrive.orderToString(),
+    fromTown = fromTown,
+    toTown = toTown,
+    departureTime = departmentTime.orderToString(),
+    arrivalTime = arriveTime.orderToString(),
     personName = personName,
     password = password,
-    typeOfPeople = typeOfPeople)
+    age = age
+)
 

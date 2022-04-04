@@ -7,13 +7,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class OrdersRepositoryImpl(private val orderDao: OrdersDao) : OrdersRepository {
-    override suspend fun getOrderEntity(): List<OrderEntity> {
+    override suspend fun getOrdersEntity(): List<OrderEntity> {
         return withContext(Dispatchers.IO) {
             return@withContext orderDao.getAllOrders()
         }
     }
 
-    override suspend fun putOrder(order: OrderEntity) {
+    override suspend fun saveOrderEntity(order: OrderEntity) {
         withContext(Dispatchers.IO) {
             orderDao.saveOrder(order)
         }
