@@ -8,7 +8,7 @@
     <string name="snack_empty">Есть пустые поля</string>
     <string name="snack_date">Неверный формат даты</string>
     <string name="snack_password">Неверный формат номера паспорта</string>
-    <string name="dates">Вылет %s. Прибытие %s</string>
+    <string name="dates">Вылет %s.\nПрибытие %s</string>
     <string name="towns">%s - %s</string>
     <string name="person_info">Имя: %s.\nНомер паспорта: %s.\nТип билета: %s</string>
     <string name="from_town">Откуда</string>

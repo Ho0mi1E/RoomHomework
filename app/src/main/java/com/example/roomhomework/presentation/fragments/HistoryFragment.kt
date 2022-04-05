@@ -7,7 +7,7 @@ import com.example.roomhomework.R
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presentation.deleteClickListner.OnOrderItemClickListener
 import com.example.roomhomework.presentation.recycler.OrdersAdapter
-import com.example.roomhomework.presentation.viewModel.OrdersViewModel
+import com.example.roomhomework.presentation.viewModels.HistoryViewModel
 import kotlinx.android.synthetic.main.fragment_history.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -36,7 +36,7 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
         }
     }
 
-    private val viewModel: OrdersViewModel by viewModel()
+    private val viewModel: HistoryViewModel by viewModel()
     private val adapter by lazy { OrdersAdapter(clickListener) }
 
     override fun onStart() {
@@ -51,4 +51,6 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
         }
         recycler.adapter = adapter
     }
+
+
 }

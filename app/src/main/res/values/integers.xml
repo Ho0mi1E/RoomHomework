@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <integer name="password_count">7</integer>
+    <integer name="password_count">9</integer>
     <integer name="bias">0</integer>
 </resources>

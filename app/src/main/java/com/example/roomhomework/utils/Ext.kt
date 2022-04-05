@@ -18,8 +18,8 @@ fun FragmentActivity.openFragment(container: Int, tag: String, fragment: Fragmen
 
 }
 
-fun ViewModel.showSnack(message: String, view: View) {
-    Snackbar.make(view, message, Snackbar.LENGTH_LONG).show()
+fun Fragment.showSnack(message: String) {
+    Snackbar.make(requireView(), message, Snackbar.LENGTH_LONG).show()
 }
 
 
