@@ -9,9 +9,10 @@ import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.utils.Constants
 import com.example.roomhomework.utils.toDate
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 
-class OrdersViewModel(private val interactor: OrdersInteractor) : BasicViewModel() {
+class OrdersViewModel @Inject constructor(private val interactor: OrdersInteractor) : BasicViewModel() {
 
     companion object {
         const val EMPTY_VALIDATION = 1

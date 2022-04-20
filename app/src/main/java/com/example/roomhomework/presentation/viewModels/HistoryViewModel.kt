@@ -5,8 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.roomhomework.domain.interactor.OrdersInteractor
 import com.example.roomhomework.domain.model.Order
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HistoryViewModel(private val interactor: OrdersInteractor) : BasicViewModel() {
+class HistoryViewModel @Inject constructor(private val interactor: OrdersInteractor) : BasicViewModel() {
 
     fun getOrders() {
         viewModelScope.launch {

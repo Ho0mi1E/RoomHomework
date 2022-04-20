@@ -3,13 +3,16 @@ package com.example.roomhomework.presentation.fragments
 
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.roomhomework.OrdersApplication
 import com.example.roomhomework.R
+import com.example.roomhomework.databinding.FragmentHistoryBinding
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presentation.deleteClickListner.OnOrderItemClickListener
 import com.example.roomhomework.presentation.recycler.OrdersAdapter
 import com.example.roomhomework.presentation.viewModels.HistoryViewModel
-import kotlinx.android.synthetic.main.fragment_history.*
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import javax.inject.Inject
+
 
 class HistoryFragment : Fragment(R.layout.fragment_history) {
     companion object {
@@ -36,12 +39,18 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
         }
     }
 
-    private val viewModel: HistoryViewModel by viewModel()
+    @Inject
+    lateinit var viewModel: HistoryViewModel
+
     private val adapter by lazy { OrdersAdapter(clickListener) }
+    private val binding: FragmentHistoryBinding by viewBinding()
 
     override fun onStart() {
         super.onStart()
+        OrdersApplication.appComponent?.injectHistory(this)
+
         initObserves()
+
     }
 
     private fun initObserves() {
@@ -49,8 +58,6 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
         viewModel.orders.observe(viewLifecycleOwner) { list ->
             adapter.submitOrders(list)
         }
-        recycler.adapter = adapter
+        binding.recycler.adapter = adapter
     }
-
-
 }

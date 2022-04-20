@@ -77,7 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/departure_time"
-            android:textColorHint="@color/hint_color" />
+            android:textColorHint="@color/hint_color"
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -88,7 +89,6 @@
         android:layout_marginStart="@dimen/edit_start"
         android:layout_marginTop="@dimen/edit_top"
         android:layout_marginEnd="@dimen/edit_start"
-        app:helperText="@string/helper_date"
         app:helperTextEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/arrival_time"
-            android:textColorHint="@color/hint_color" />
+            android:textColorHint="@color/hint_color"
+            android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

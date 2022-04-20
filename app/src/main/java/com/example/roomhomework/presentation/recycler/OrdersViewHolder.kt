@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.roomhomework.R
+import com.example.roomhomework.databinding.ItemOrderBinding
 import com.example.roomhomework.domain.model.Order
 import com.example.roomhomework.presentation.deleteClickListner.OnOrderItemClickListener
 import com.example.roomhomework.utils.orderToString
-import kotlinx.android.synthetic.main.item_order.view.*
 
 class OrdersViewHolder(itemView: View, private val clickListener: OnOrderItemClickListener) :
     RecyclerView.ViewHolder(itemView) {
@@ -21,18 +22,20 @@ class OrdersViewHolder(itemView: View, private val clickListener: OnOrderItemCli
             )
     }
 
+    private val binding: ItemOrderBinding by viewBinding()
+
     fun bind(item: Order) {
         item.apply {
-            itemView.townInfo.text = itemView.context.getString(R.string.towns, fromTown, toTown)
-            itemView.dates.text = itemView.context.getString(
+            binding.townInfo.text = itemView.context.getString(R.string.towns, fromTown, toTown)
+            binding.dates.text = itemView.context.getString(
                 R.string.dates,
                 departmentTime.orderToString(),
                 arriveTime.orderToString()
             )
-            itemView.personInfo.text =
+            binding.personInfo.text =
                 itemView.context.getString(R.string.person_info, personName, password, age)
         }
-        itemView.btnDelete.setOnClickListener {
+        binding.btnDelete.setOnClickListener {
             clickListener.onDeleteButtonClicked(item)
         }
     }
